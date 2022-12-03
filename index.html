@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
+        />
+        <link rel="stylesheet" href="./style/style.css" />
+        <title>Html+Css1.0</title>
+    </head>
+    <body>
+        <main>
+            <section class="button-change-icon">
+                <div class="container">
+                    <button class="button" data-modal-open>Change Icon</button>
+                </div>
+            </section>
+
+            <section class="list-link-bottom-line">
+                <div class="container">
+                    <ul class="nav list">
+                        <li class="nav-item"><a href="" class="nav-link link">Студіо</a></li>
+                        <li class="nav-item"><a href="" class="nav-link link">Портфоліо</a></li>
+                        <li class="nav-item"><a href="" class="nav-link link">Контакти</a></li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="overlay-text-to-image">
+                <div class="container">
+                    <article class="product">
+                        <div class="product-thumb">
+                            <img
+                                src="./image/img1.jpg"
+                                alt="Poster New Orlean vs Golden Star"
+                                width="370px"
+                            />
+                            <div class="product-overlay">
+                                <p class="overlay-text">
+                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sint
+                                    repudiandae aliquid odit impedit quaerat animi. Lorem ipsum,
+                                    dolor sit amet consectetur adipisicing elit. Sint repudiandae
+                                    aliquid odit
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="product-name">
+                            <p>Технокряк</p>
+                            <p>Веб-сайт</p>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <section class="menu">
+                <div class="container">
+                    <ul class="menu-list list">
+                        <li class="menu-item">
+                            <a href="" class="menu-link link">Штукатурка</a>
+                            <ul class="submenu-list is-hidden list">
+                                <li>
+                                    <a href="" class="link">Knauf MP75</a>
+                                </li>
+                                <li>
+                                    <a href="" class="link">Siltek PM11</a>
+                                </li>
+                                <li>
+                                    <a href="" class="link">Anserglob</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="menu-item"><a href="" class="menu-link link">Гіпсокартон</a></li>
+                        <li class="menu-item"><a href="" class="menu-link link">Стяжка</a></li>
+                    </ul>
+                    <p>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati
+                        molestiae expedita tempora consectetur in velit et sed architecto. Dolor
+                        iure sequi, vero iste vel porro, recusandae, dolorem nam sit consectetur
+                        facere molestias impedit. Hic quaerat explicabo adipisci, earum est
+                        dignissimos illum placeat expedita excepturi ipsum, voluptatem consectetur
+                        dolor error accusantium?
+                    </p>
+                </div>
+            </section>
+        </main>
+        <div class="backdrop is-hidden" data-modal>
+            <div class="modal">
+                <button type="button" class="modal-close" data-modal-close>x</button>
+            </div>
+        </div>
+        <script src="./js/modal.js"></script>
+    </body>
+</html>

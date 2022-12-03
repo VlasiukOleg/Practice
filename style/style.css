@@ -271,3 +271,62 @@ button {
     opacity: 0;
     pointer-events: none;
 }
+
+/* ------------Perspective-------- */
+
+.scene {
+    width: 200px;
+    height: 200px;
+
+    outline: 1px solid tomato;
+
+    perspective: 500px;
+}
+
+.box {
+    position: relative;
+
+    width: 100%;
+    height: 100%;
+
+    transform: rotateY(0);
+
+    transition: transform 1500ms ease;
+    transform-style: preserve-3d;
+
+    transform-origin: center right;
+
+    cursor: pointer;
+}
+
+.box-face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    backface-visibility: hidden;
+}
+
+.box-front {
+    background-color: black;
+}
+
+.box-back {
+    background-color: aquamarine;
+    transform: rotateY(180deg);
+}
+
+.scene:hover .box {
+    transform: translate(-100%) rotateY(180deg);
+}
+
+.icon {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    fill: currentColor;
+}

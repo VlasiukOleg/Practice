@@ -5,9 +5,18 @@
 }
 
 body {
-    font-family: sans-serif;
-    line-height: 1.5;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.17;
     background-color: #f9f9fd;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
 }
 
 img {
@@ -207,10 +216,15 @@ button {
     position: absolute;
     top: 50%;
     left: 50%;
+    padding: 40px;
 
-    width: 300px;
-    min-height: 350px;
+    width: 528px;
+    min-height: 581px;
+
     background-color: white;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+        0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
 
     transform: translate(-50%, -50%) scale(1);
 
@@ -225,6 +239,171 @@ button {
     position: absolute;
     top: 10px;
     right: 10px;
+
+    background-color: transparent;
+    border-radius: 50%;
+    border: 2px solid grey;
+}
+
+/* --------Form--------- */
+
+.submit-button {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+
+    transform: translate(-50%);
+
+    display: block;
+    padding: 15px 52px;
+
+    background: #188ce8;
+
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border: none;
+    border-radius: 4px;
+    color: #eeeeee;
+
+    margin: 0 auto;
+}
+
+.form-field {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+
+    margin-bottom: 10px;
+}
+
+.name-icon {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+}
+
+.form-label,
+.group .label {
+    font-size: 12px;
+    letter-spacing: 0.01em;
+    color: #757575;
+
+    margin-bottom: 4px;
+}
+
+.form-input {
+    padding: 12px 32px 12px;
+
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+
+    outline: none;
+}
+
+.form-field:focus-within > .name-icon {
+    fill: #2196f3;
+}
+
+.form-field:focus-within > .form-input {
+    border-color: #2196f3;
+}
+
+.form-field .text {
+    padding: 12px;
+
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+
+    outline: none;
+
+    resize: none;
+}
+
+.form-field .text::placeholder {
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.01em;
+
+    color: rgba(117, 117, 117, 0.5);
+}
+
+.form-field:focus-within > .text {
+    border-color: #2196f3;
+}
+
+.form-title {
+    font-family: 'Roboto';
+    font-weight: 700;
+    font-size: 20px;
+    text-align: center;
+    letter-spacing: 0.03em;
+}
+
+.form .product-list {
+    margin-bottom: 20px;
+}
+
+.form .product-list-title {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.form .product-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 6px;
+}
+
+.product-item .label {
+    margin-bottom: 0;
+    margin-left: 5px;
+}
+
+.policy {
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.policy .form-label {
+    margin-bottom: 0;
+    margin-left: 10px;
+}
+
+.policy-icon {
+    display: inline-block;
+    width: 16px;
+    height: 15px;
+
+    border: 2px solid #212121;
+    border-radius: 2px;
+}
+
+.policy-checkbox {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+}
+
+.policy-checkbox:checked ~ .policy-icon {
+    background-color: #188ce8;
+    border-color: transparent;
+
+    background-origin: border-box;
+}
+
+.policy-checkbox:focus ~ .policy-icon {
+    border-color: #188ce8;
 }
 
 /* ---------Menu ----------- */

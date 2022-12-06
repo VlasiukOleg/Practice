@@ -4,6 +4,12 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
+            rel="stylesheet"
+        />
         <link
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
@@ -107,8 +113,81 @@
                 </div>
             </section>
         </main>
-        <div class="backdrop is-hidden" data-modal>
+        <div class="backdrop" data-modal>
             <div class="modal">
+                <form class="form" autocomplete="off">
+                    <h2 class="form-title">Заповніть свої дані</h2>
+                    <label class="form-field"
+                        ><span class="form-label">Ім'я</span>
+                        <input type="text" name="name" class="form-input" placeholder="" />
+                        <svg class="name-icon" widht="18" height="18">
+                            <use href="./icons.svg#icon-person"></use>
+                        </svg>
+                    </label>
+
+                    <label class="form-field"
+                        ><span class="form-label">Телефон</span>
+                        <input type="tel" name="tel" class="form-input" placeholder="" />
+                        <svg class="name-icon" widht="18" height="18">
+                            <use href="./icons.svg#icon-phone"></use>
+                        </svg>
+                    </label>
+
+                    <label class="form-field"
+                        ><span class="form-label">Пошта</span>
+                        <input type="email" name="email" class="form-input" />
+                        <svg class="name-icon" widht="18" height="18">
+                            <use href="./icons.svg#icon-email"></use>
+                        </svg>
+                    </label>
+
+                    <div role="group" class="group">
+                        <ul class="product-list list">
+                            <h3 class="product-list-title">Виберіть тип сайту</h3>
+                            <li class="product-item">
+                                <input type="radio" name="product" id="land value="land" checked/>
+                                <label for="land" class="label">Лендінг</label>
+                            </li>
+                            <li class="product-item">
+                                <input
+                                    type="radio"
+                                    name="product"
+                                    id="web-store"
+                                    value="web-store"
+                                />
+                                <label for="web-store" class="label">Інтернет-магазин</label>
+                            </li>
+                            <li class="product-item">
+                                <input type="radio" name="product" id="web-store" value="other" />
+                                <label for="other" class="label">Інший варіант</label>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <label for="comment" class="form-field"
+                        ><span class="form-label">Коментар</span>
+                        <textarea
+                            name="comment"
+                            placeholder="Введіть текст"
+                            class="text"
+                        ></textarea>
+                    </label>
+
+                    <label class="form-field policy">
+                        <input
+                            type="checkbox"
+                            name="policy"
+                            value="policy"
+                            class="policy-checkbox"
+                        />
+                        <svg class="policy-icon" widht="16" height="15">
+                            <use href="./icons.svg#icon-check"></use>
+                        </svg>
+                        <span class="form-label">Погоджуюсь з розсилкою</span>
+                    </label>
+
+                    <button type="submit" class="submit-button">Відправити</button>
+                </form>
                 <button type="button" class="modal-close" data-modal-close>x</button>
             </div>
         </div>
